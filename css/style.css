@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+}
+
+.room {
+  position: relative;
+  overflow: hidden;
+  max-width: 80%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.room__pic {
+  height: 400px;
+  z-index: 2;
+  width: 400px;
+  position: absolute;
+  background-size: cover;
+  bottom: 100px;
+  left: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.room__bed {
+  height: 400px;
+  z-index: 2;
+  width: 400px;
+  position: absolute;
+  background-size: cover;
+  bottom: 100px;
+  left: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.room__lamp {
+  height: 400px;
+  z-index: 2;
+  width: 400px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 150px;
+  left: 200px;
+}
+
+.room__cabinet {
+  height: 400px;
+  z-index: 2;
+  width: 400px;
+  position: absolute;
+  bottom: 200px;
+  left: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn-container__arrows {
+  display: flex;
+  outline: 1px solid;
+  display: inline-flex;
+}
+
+.btn-container__arrow {
+  outline: 1px solid;
+  margin: 5px;
+  padding: 3px;
+}
+
+footer {
+  background: #2a284f;
+  height: 100vh;
+  color: #fdc931;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 25px;
+  width: 20%;
+}
+
+.btn-container {
+  overflow: scroll;
+  height: 100vh;
+}
+
+.btn-container * {
+  display: block;
+}
+
+.option-item {
+  height: 50px;
+  width: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+  outline: 1px solid #fdc931;
+  display: flex;
+  align-items: center;
+  background-position: center;
+}
+
+.btn-container__change-room,
+.btn-container__change-bed,
+.btn-container__change-lamp,
+.btn-container__change-cabinet,
+.btn-container__change-pic {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #fdc931;
+  padding: 10px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-change-property</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <main>
+      <div class="room">
+        <div class="room__pic"></div>
+        <div class="room__bed"></div>
+        <div class="room__lamp"></div>
+        <div class="room__cabinet"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="btn-container">
+        <h2>Тип комнаты</h2>
+        <section class="btn-container__change-room">
+        </section>
+        <h2>Тип кровати</h2>
+        <section class="btn-container__change-bed">
+        </section>
+        <h2>Тип настольной лампы</h2>
+        <section class="btn-container__change-lamp">
+        </section>
+        <h2>Тип шкафа</h2>
+        <section class="btn-container__change-cabinet">
+        </section>
+        <h2>Тип плаката</h2>
+        <section class="btn-container__change-pic">
+        </section>
+        <h2>Кнопки для передвижения</h2>
+        <select class="btn-container__move">
+          <option disabled selected>Что двигать?</option>
+          <option value="cabinet">Шкаф</option>
+          <option value="bed">Кровать</option>
+          <option value="lamp">Лампу</option>
+          <option value="pic">Плакат</option>
+        </select>
+        <div class="btn-container__arrows">
+          <span class="btn-container__arrow" onclick="move('right')">Вправо</span>
+          <span class="btn-container__arrow" onclick="move('left')">Влево</span>
+          <span class="btn-container__arrow" onclick="move('top')">Вверх</span>
+          <span class="btn-container__arrow" onclick="move('bottom')">Вниз</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
