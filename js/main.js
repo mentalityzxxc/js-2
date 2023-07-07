@@ -24,3 +24,29 @@ arrayRoomsImg.forEach(function (PathToImg) {
     room.setAttribute('style', `background-image:url(${PathToImg})`)
   }
 })
+let beds = document.getElementsByClassName('btn-container__change-bed');
+let pathToBedImage = new Array(
+  './img/bed/1.png',
+  './img/bed/2.png',
+  './img/bed/3.png',
+);
+function renderBed(){
+let link = event.target.dataset.link
+console.log(link)
+let bedBlock = document.querySelector('.room__bed')
+bedBlock.style.backgroundImage = `url('${link}')`
+
+}
+for(let i = 0; i < pathToBedImage.length; i++) {
+let linkBed = `
+  <a 
+  class="option-item" 
+  data-link="${pathToBedImage[i]}"
+  data-type="bed"
+  style="background-image:url(${pathToBedImage[i]})"
+  onclick="renderBed()">
+  </a>`;
+  
+
+    beds[0].innerHTML += linkBed;
+}
