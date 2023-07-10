@@ -30,10 +30,11 @@ let pathToBedImage = new Array(
   './img/bed/2.png',
   './img/bed/3.png',
 );
-function renderBed(){
+function render(){
 let link = event.target.dataset.link
+let type = event.target.dataset.type
 console.log(link)
-let bedBlock = document.querySelector('.room__bed')
+let bedBlock = document.querySelector(`.room__${type}`)
 bedBlock.style.backgroundImage = `url('${link}')`
 
 }
@@ -44,7 +45,7 @@ let linkBed = `
   data-link="${pathToBedImage[i]}"
   data-type="bed"
   style="background-image:url(${pathToBedImage[i]})"
-  onclick="renderBed()">
+  onclick="render()">
   </a>`;
   
 
@@ -71,10 +72,24 @@ let linkLamp = `
   data-link="${pathToLampImage[i]}"
   data-type="lamp"
   style="background-image:url(${pathToLampImage[i]})"
-  onclick="renderLamp()">
+  onclick="render()">
   </a>`;
   
 
   lamp[0].innerHTML += linkLamp;
 }
 
+let changeCabinets = document.querySelector('section.btn-container__change-cabinet')
+let arrayCabinet = []
+arrayCabinet.push('./img/cabinet/1.png')
+arrayCabinet.push('./img/cabinet/2.png')
+for(let cabinet of arrayCabinet){
+  let linkCabinet = `  <a 
+  class="option-item" 
+  data-link="${cabinet}"
+  data-type="cabinet"
+  style="background-image:url(${cabinet})"
+  onclick="render()">
+  </a>`
+  changeCabinets.innerHTML += linkCabinet
+}
