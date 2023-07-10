@@ -50,3 +50,31 @@ let linkBed = `
 
     beds[0].innerHTML += linkBed;
 }
+let lamp = document.getElementsByClassName('btn-container__change-lamp');
+let pathToLampImage = new Array(
+  './img/lamp/1.png',
+  './img/lamp/2.png',
+  './img/lamp/3.png',
+  './img/lamp/4.png',
+);
+function renderLamp(){
+let link = event.target.dataset.link
+console.log(link)
+let lampBlock = document.querySelector('.room__lamp')
+lampBlock.style.backgroundImage = `url('${link}')`
+
+}
+for(let i = 0; i < pathToLampImage.length; i++) {
+let linkLamp = `
+  <a 
+  class="option-item" 
+  data-link="${pathToLampImage[i]}"
+  data-type="lamp"
+  style="background-image:url(${pathToLampImage[i]})"
+  onclick="renderLamp()">
+  </a>`;
+  
+
+  lamp[0].innerHTML += linkLamp;
+}
+
