@@ -93,3 +93,20 @@ for(let cabinet of arrayCabinet){
   </a>`
   changeCabinets.innerHTML += linkCabinet
 }
+
+let changePic = document.querySelector('section.btn-container__change-pic')
+let arrayPic = []
+arrayPic.push('./img/pic/1.jpeg')
+arrayPic.push('./img/pic/2.jpeg')
+for(let pic of arrayPic){
+  let linkPic = `
+  <a 
+  class="option-item" 
+  data-link="${pic}"
+  data-type="pic"
+  style="background-image:url(${pic})"
+  onclick="render()">
+  </a>
+  `
+  changePic.innerHTML += linkPic
+}
