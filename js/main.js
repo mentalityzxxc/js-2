@@ -110,3 +110,4 @@ for(let pic of arrayPic){
   `
   changePic.innerHTML += linkPic
 }
+//les 24
