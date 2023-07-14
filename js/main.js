@@ -1,3 +1,4 @@
+//Шкафы
 let room = document.querySelector('.room')
 room.setAttribute('style', 'background-image : url(./img/rooms/1.jpeg)')
 let arrayRoomsImg = [
@@ -24,6 +25,7 @@ arrayRoomsImg.forEach(function (PathToImg) {
     room.setAttribute('style', `background-image:url(${PathToImg})`)
   }
 })
+//Кровати
 let beds = document.getElementsByClassName('btn-container__change-bed');
 let pathToBedImage = new Array(
   './img/bed/1.png',
@@ -51,6 +53,7 @@ let linkBed = `
 
     beds[0].innerHTML += linkBed;
 }
+//Лампы
 let lamp = document.getElementsByClassName('btn-container__change-lamp');
 let pathToLampImage = new Array(
   './img/lamp/1.png',
@@ -78,7 +81,7 @@ let linkLamp = `
 
   lamp[0].innerHTML += linkLamp;
 }
-
+//Шкафы
 let changeCabinets = document.querySelector('section.btn-container__change-cabinet')
 let arrayCabinet = []
 arrayCabinet.push('./img/cabinet/1.png')
@@ -93,7 +96,7 @@ for(let cabinet of arrayCabinet){
   </a>`
   changeCabinets.innerHTML += linkCabinet
 }
-
+//Плакаты
 let changePic = document.querySelector('section.btn-container__change-pic')
 let arrayPic = []
 arrayPic.push('./img/pic/1.jpeg')
