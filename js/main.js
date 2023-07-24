@@ -113,4 +113,54 @@ for(let pic of arrayPic){
   `
   changePic.innerHTML += linkPic
 }
-//les 24
+//les 27
+
+let conatinerMove = document.querySelector(".btn-container__move")
+let elementMove;
+conatinerMove.addEventListener('change',function(event){
+  console.log('элемент изменился',event.target.value)
+  elementMove = (`.room__${event.target.value}`)
+})
+
+function move(toMoveElement){
+  let element = document.querySelector(elementMove)
+  console.log('Двигаем элементы', toMoveElement, element)
+  let newPoints
+  switch (toMoveElement) {
+    case 'top':
+      if(element.style.bottom){
+        newPoints = parseInt(element.style.bottom)+ 10
+       } else {
+         newPoints = 0
+       }
+       element.style.bottom = newPoints + "px"
+      break;
+      case 'bottom':
+        if(element.style.bottom){
+          newPoints = parseInt(element.style.bottom)- 10
+         } else {
+           newPoints = 0
+         }
+         element.style.bottom = newPoints + "px"
+  break 
+  case 'left':
+    if(element.style.left){
+      newPoints = parseInt(element.style.left)- 10
+     } else {
+       newPoints = 0
+     }
+     element.style.left = newPoints + "px"
+break 
+case 'right':
+  if(element.style.left){
+    newPoints = parseInt(element.style.left)+ 10
+   } else {
+     newPoints = 0
+   }
+   element.style.left = newPoints + "px"
+break 
+    }
+
+  const newPosition = newPoints 
+  console.log(newPosition)
+}
